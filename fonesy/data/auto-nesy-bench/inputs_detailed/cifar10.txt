@@ -1,0 +1,14 @@
+We want to formalize a object classification task.
+
+Logical constraints:
+- The object is an airplane if it has wings and is metallic, but has no wheels and is not an animal, hairy, horned, or snouted.
+- The object is either a car or truck if it has wheels and is metallic, but has no wings and is not an animal, hairy, horned, or snouted.
+- The object is a bird if it is an animal with wings, but has no wheels and is not metallic, hairy, horned, or snouted.
+- The object is a frog if it is an animal with no wheels, wings, metallic surface, hair, horns, or snout.
+- The object is a deer if it is an animal that is hairy and has horns and a snout, but has no wheels, wings, or metallic surface.
+- The object is a cat if it is an animal that is hairy, but has no wheels, wings, metallic surface, horns, or snout.
+- The object is either a dog or horse if it is an animal that is hairy and has a snout, but has no wheels, wings, metallic surface, or horns.
+- The object is a ship if it is metallic, but has no wheels or wings and is not an animal, hairy, horned, or snouted.
+- Exactly one of the object class must be true.
+
+If the object does not exactly match any of these descriptions, it cannot be classified as any of the above.

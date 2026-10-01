@@ -1,0 +1,9 @@
+We want to formalize an overall-sentiment aggregation rule for restaurant reviews.
+
+Logical constraints:
+- Exactly one output label must be true.
+- The label is positive if and only if positive sentiment is the most common sentiment across the five sentiments, including cases where it ties with neutral or unknown, but not with negative.
+- The label is negative if and only if negative sentiment is the most common sentiment across the five sentiments, including cases where it ties with neutral or unknown, but not with positive.
+- The label is neutral if and only if neutral sentiment is strictly more common than both positive and negative sentiment, including cases where it ties with unknown.
+- The label is unknown if and only if unknown is strictly more common than positive, negative, and neutral sentiment.
+- The label is conflict if and only if positive and negative sentiment are tied as the most common sentiments.

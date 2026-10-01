@@ -1,0 +1,13 @@
+We want to formalize a grid validity task (4x4 grid).
+
+Logical constraints:
+- Each cell must contain exactly one digit.
+- Every row must contain each digit exactly once.
+- Every column must contain each digit exactly once.
+- Every 2×2 box must contain each digit exactly once.
+- The four 2×2 boxes are:
+	- Rows 0-1 and Columns 0-1
+	- Rows 0-1 and Columns 2-3
+	- Rows 2-3 and Columns 0-1
+	- Rows 2-3 and Columns 2-3
+- The constraints apply simultaneously to all 16 cells of the grid

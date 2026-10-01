@@ -1,0 +1,16 @@
+We want to formalize a grid-pathfinding validity task on a 4x4 grid.
+
+Logical constraints:
+- The selected variables represent the edges belonging to a path on the 4×4 grid.
+- The path must start at the top-left cell (0,0).
+- Exactly one of the two edges incident to the start cell (right or down) must be selected.
+- The path must end at the bottom-right cell (3,3).
+- Exactly one of the two edges incident to the end cell (left or up) must be selected.
+- Every other cell in the grid must have either:
+	- no incident selected edges (the path does not pass through the cell), or
+	- exactly two incident selected edges (one edge enters the cell and one edge leaves it).
+- No intermediate cell may have exactly one or more than two incident selected edges.
+- The selected edges must form a continuous path connecting the start cell to the end cell.
+- The selected edges must not contain any closed cycle.
+- There must not be any disconnected loop or additional cycle elsewhere in the grid.
+- The selected edges must form exactly one simple path from cell (0,0) to cell (3,3).

@@ -1,0 +1,4 @@
+We want to formalize the validity of a ranking of sushi types across preference ranks.
+
+Logical constraints:
+- Encode a valid permutation matrix representing a complete ranking of the four sushi items.

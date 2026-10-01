@@ -1,0 +1,18 @@
+We want to formalize a consistency-checking task from autonomous driving. Picture a single frame of dash-cam footage from a self-driving car, with a box drawn around one detected road user or traffic light. An annotator has labeled that one detection with a whole set of tags at once, i.e., what kind of agent it is, what it's doing, where it is, and, if it's a traffic light, what color it's showing.
+
+Logical constraints:
+- Exactly one agent class must be true.
+- At least one location must be true.
+- Each agent class can only have its valid actions.
+- Each action can only apply to valid agent classes.
+- Each agent class can only occur in valid locations.
+- Traffic lights can only have a valid traffic-light colour and no movement actions.
+- Red, amber, and green are mutually exclusive.
+- Pushing an object is only allowed for pedestrians.
+- Crossing and waiting-to-cross are only allowed for valid road users.
+- Invalid agent-class combinations are not allowed.
+- Invalid agent-action combinations are not allowed.
+- Invalid agent-location combinations are not allowed.
+- Invalid action-action combinations are not allowed.
+- Invalid location-location combinations are not allowed.
+- All constraints apply to the same detection.

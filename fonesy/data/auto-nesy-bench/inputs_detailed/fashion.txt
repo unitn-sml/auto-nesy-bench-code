@@ -1,0 +1,5 @@
+We want to formalize a constraint on a dress classification task: every clothing image belongs to exactly one of the classes.
+
+Logical constraints:
+- The item must belong to exactly one class.
+- No two classes can be assigned to the same item.

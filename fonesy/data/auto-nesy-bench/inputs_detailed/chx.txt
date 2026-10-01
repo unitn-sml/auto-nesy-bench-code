@@ -1,0 +1,11 @@
+We want to formalize a clinical severity-scoring rule for chest X-ray findings.
+
+Logical constraints:
+The severity code is determined by the number of findings that are present:
+- no findings correspond to healthy
+- one finding to green_code
+- two findings to yellow_code
+- three findings to orange_code
+- four findings to red_code.
+
+Exactly one of the emergency codes must be true.

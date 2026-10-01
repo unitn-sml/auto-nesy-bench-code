@@ -1,0 +1,26 @@
+You are an expert in Boolean logic and constraint modeling.
+
+Your task is to convert the following logical problem into a Boolean CNF formula using natural language operators.
+
+This problem's declared variables are (each declared variable expands to one Boolean per value in its domain, named <name>_eq<value> -- use those exact expanded names as the CNF literals):
+{variables}
+
+Format rules:
+- Use AND to join clauses, OR to join literals within a clause, NOT to negate a variable
+- Operators are AND, OR, NOT (any letter case works, e.g. "and"/"AND"); do NOT use XOR, NAND, NOR, XNOR, or symbols like &/|/~
+- Variable names MUST follow the <name>_eq<value> pattern described above
+- Each clause must be enclosed in parentheses: (lit1 OR lit2 OR ...)
+- Clauses are joined at the top level by AND: (clause1) AND (clause2) AND ...
+- Newlines are treated as whitespace; only AND separates clauses
+
+Problem:
+{problem}
+
+Before producing the formula, think step by step inside <think></think> tags. In your reasoning, you may:
+- List the variables and how you'll expand them into one-hot names
+- Enumerate the constraints you need to encode
+- Work out sub-encodings or auxiliary structure
+
+Then output the final formula inside <cnf></cnf> tags.
+
+Do not use markdown, backticks, or any other formatting outside these two tag pairs. Anything outside <think></think> and <cnf></cnf> makes the output invalid.

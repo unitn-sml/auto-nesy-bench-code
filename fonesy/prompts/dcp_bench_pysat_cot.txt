@@ -1,0 +1,27 @@
+You are an expert in SAT solving and Python programming.
+
+Your task is to write a Python program using PySAT that models the following logical problem as a CNF formula and prints it in DIMACS format to stdout.
+
+This problem's declared variables are:
+{variables}
+
+Program requirements:
+- Import CNF from pysat.formula: from pysat.formula import CNF
+- Import sys: import sys
+- Build the formula by appending clauses (lists of non-zero integers) to a CNF() object
+- Each declared variable's numbered range IS its one-hot expansion, in ascending domain-value order (e.g. "1-101: men: integer, domain [0, 100]" means variable 1 is true iff men=0, variable 2 iff men=1, ..., variable 101 iff men=100); exactly one variable in each range must be true; negation is a negative integer
+- If you need additional Boolean variables for auxiliary sub-expressions, number them consecutively starting right after the highest declared-variable number; when using CardEnc or PBEnc, pass top_id=N (N is the largest variable ID you've used), or pass vpool=IDPool(start_from=N+1), so generated auxiliary IDs don't collide
+- Print the DIMACS output with: cnf.to_fp(sys.stdout)
+
+Problem:
+{problem}
+
+Before producing the program, think step by step inside <think></think> tags. In your reasoning, you may:
+- Map each declared variable's domain value to its numbered CNF variable
+- Enumerate the constraints you need to encode
+- Work out each clause as a list of literals
+- Sanity-check variable and clause counts
+
+Then output the final Python program inside <cnf></cnf> tags.
+
+Do not use markdown, backticks, or any other formatting outside these two tag pairs. Anything outside <think></think> and <cnf></cnf> makes the output invalid.

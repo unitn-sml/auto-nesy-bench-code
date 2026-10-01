@@ -1,0 +1,5 @@
+We want to formalize a grid validity task (4x4 grid).
+
+Logical constraints:
+- Each cell must contain exactly one digit.
+- Each digit 1-4 appears exactly once in each row, each column, and every 2x2 box.

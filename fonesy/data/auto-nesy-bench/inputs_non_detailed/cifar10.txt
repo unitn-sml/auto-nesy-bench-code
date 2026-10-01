@@ -1,0 +1,14 @@
+We want to formalize a object classification task.
+
+Logical constraints:
+- An airplane has wings and is metallic.
+- A car or truck has wheels and is metallic.
+- A bird is an animal with wings.
+- A frog is an animal with none of the listed physical features.
+- A deer is an animal with hair, horns, and a snout.
+- A cat is an animal with hair.
+- A dog or horse is an animal with hair and a snout.
+- A ship is metallic but has no animal features.
+- Exactly one class must be true.
+
+If the object does not exactly match any of these descriptions, it cannot be classified as any of the above.

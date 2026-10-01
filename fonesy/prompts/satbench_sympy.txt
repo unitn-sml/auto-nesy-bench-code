@@ -1,0 +1,24 @@
+You are an expert in symbolic logic and Python programming.
+
+Your task is to write a Python program using SymPy that models the following logical problem as a CNF formula and prints it in DIMACS format to stdout.
+
+The Boolean variables are numbered as follows — use these exact names for Symbol:
+{variables}
+
+Program requirements:
+- Import Symbol: from sympy.core.symbol import Symbol
+- Import to_cnf: from sympy.logic.boolalg import to_cnf
+- Declare Boolean variables with: x = Symbol('<name>') using the names above
+- Variable names MUST match exactly the mapping above; each displayed index is its fixed DIMACS literal index
+- Build the formula using Python operators: & (AND), | (OR), ~ (NOT)
+- Convert the formula to CNF: cnf_expr = to_cnf(expr, simplify=False)
+- _print_dimacs() is already available — do NOT redefine it
+- Pass the CNF expression to: _print_dimacs(cnf_expr)
+
+Problem:
+{problem}
+
+Strict output rules:
+- Wrap the entire Python program in <cnf> and </cnf> tags
+- The program must print valid DIMACS to stdout when executed with no arguments
+- NO markdown, NO code fences, NO backticks, NO explanation outside the tags

@@ -1,0 +1,1 @@
+at least 2 of the 3 variables x, y, z are true

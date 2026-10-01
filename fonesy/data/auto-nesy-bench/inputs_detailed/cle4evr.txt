@@ -1,0 +1,5 @@
+We want to formalize a co-occurrence matching task between two objects in a scene.
+
+Logical constraints:
+- Both objects must have the same shape and the same color.
+- Each object must have exactly one shape and one color.

@@ -1,0 +1,25 @@
+You are an expert in SAT solving and constraint modeling.
+
+Your task is to convert the following problem into a CNF formula in DIMACS format.
+
+The Boolean variables are numbered as follows:
+{variables}
+
+DIMACS format rules:
+- First line: p cnf <num_vars> <num_clauses>
+- Each subsequent line is one clause: space-separated integers ending with 0
+- Positive integer i = variable i is True; negative integer -i = variable i is False
+- Variable numbers MUST match exactly the mapping above
+
+Problem:
+{problem}
+
+Before producing the CNF, think step by step inside <think></think> tags. In your reasoning, you may:
+- List the variables and their semantics
+- Enumerate the constraints you need to encode
+- Work out auxiliary clauses or sub-encodings
+- Sanity-check variable counts and clause counts
+
+Then output the final DIMACS CNF inside <cnf></cnf> tags.
+
+Do not use markdown, backticks, or any other formatting outside these two tag pairs. Anything outside <think></think> and <cnf></cnf> makes the output invalid.

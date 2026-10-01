@@ -1,0 +1,7 @@
+We want to formalize the validity of a ranking of sushi types across preference ranks.
+
+Logical constraints:
+- Each sushi item must be assigned to exactly one preference rank.
+- Every rank must be assigned to exactly one sushi item.
+- Each sushi item cannot be assigned to more than one rank.
+- No two sushi items can share the same rank.

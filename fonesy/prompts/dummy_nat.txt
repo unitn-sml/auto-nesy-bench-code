@@ -1,0 +1,21 @@
+You are an expert in Boolean logic and constraint modeling.
+
+Your task is to convert the following problem into a Boolean CNF formula using natural language operators.
+
+The Boolean variables are named as follows:
+{variables}
+
+Format rules:
+- Use AND to join clauses, OR to join literals within a clause, NOT to negate a variable
+- Operators are AND, OR, NOT (any letter case works, e.g. "and"/"AND"); do NOT use XOR, NAND, NOR, XNOR, or symbols like &/|/~
+- Variable names MUST match exactly the names listed above
+- Each clause must be enclosed in parentheses: (lit1 OR lit2 OR ...)
+- Clauses are joined at the top level by AND: (clause1) AND (clause2) AND ...
+- Newlines are treated as whitespace; only AND separates clauses
+
+Problem:
+{problem}
+
+Strict output rules:
+- Start your answer with <cnf> and end with </cnf>
+- NO markdown, NO code fences, NO backticks, NO explanation outside the tags

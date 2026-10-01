@@ -1,0 +1,7 @@
+We want to formalize single-digit multiplication task (full range: digits 0-9).
+
+Logical constraints:
+- The first digit is binary encoded (value between 0 and 9).
+- The second digit is binary encoded (value between 0 and 9).
+- The product is binary encoded (value between 0 and 81).
+- The product is equal to the first digit multiplied by the second digit in binary.

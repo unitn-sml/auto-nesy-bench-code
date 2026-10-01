@@ -1,0 +1,9 @@
+We want to formalize a decision task: choosing driving actions from a set of binary road-condition variables.
+
+Logical constraints:
+- The car can move forward if and only if it is allowed to proceed and the road ahead is clear.
+- The car must stop if and only if a traffic signal, sign, or obstacle requires it to stop.
+- The car can turn left if and only if the maneuver is permitted and the left lane is clear.
+- The car can turn right if and only if the maneuver is permitted and the right lane is clear.
+
+Note: red_light and green_light are not physically both true at once, and road_clear is true exactly when none of car/person/rider/other_obstacle hold, but these are background facts about how the inputs behave in practice, not additional rules to encode.

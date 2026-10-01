@@ -1,0 +1,27 @@
+You are an expert in constraint programming and SAT solving.
+
+Your task is to write a Python program using CPMpy that models the following logical problem as a CNF formula and prints it in DIMACS format to stdout.
+
+This problem's declared variables are (each declared variable expands to one Boolean per value in its domain, named <name>_eq<value> -- use those exact expanded names for cp.boolvar):
+{variables}
+
+Program requirements:
+- Import cpmpy: import cpmpy as cp
+- _print_dimacs() is already available -- do NOT redefine it
+- Declare Boolean variables with: cp.boolvar(name='<name>') using the <name>_eq<value> pattern described above
+- Variable names MUST follow the <name>_eq<value> pattern described above
+- Use Python operators: & (AND), | (OR), ~ (NOT)
+- Pass your constraint list to: _print_dimacs([constraint1, constraint2, ...])
+
+Problem:
+{problem}
+
+Before producing the program, think step by step inside <think></think> tags. In your reasoning, you may:
+- List the declared variables and the one-hot names you'll expand them into
+- Enumerate the constraints you need to encode
+- Work out each CPMpy expression for the constraints
+- Sanity-check the constraint list
+
+Then output the final Python program inside <cnf></cnf> tags.
+
+Do not use markdown, backticks, or any other formatting outside these two tag pairs. Anything outside <think></think> and <cnf></cnf> makes the output invalid.

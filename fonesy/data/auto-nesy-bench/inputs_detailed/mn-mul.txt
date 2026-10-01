@@ -1,0 +1,7 @@
+We want to formalize single-digit multiplication task (full range: digits 0-9).
+
+Logical constraints:
+- The first digit must have exactly one value from 0 to 9.
+- The second digit must have exactly one value from 0 to 9.
+- The product must have exactly one value from 0 to 81.
+- The product is equal to the first digit multiplied by the second digit.

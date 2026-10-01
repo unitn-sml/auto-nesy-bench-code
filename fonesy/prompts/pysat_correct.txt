@@ -1,0 +1,37 @@
+You are an expert in SAT solving and Python programming.
+
+You are given:
+1. A natural language description of a logical problem.
+2. A proposed solution as a Python program using PySAT that should print a DIMACS CNF to stdout.
+
+The program must:
+- Use pysat.formula.CNF to build the formula
+- When using CardEnc or PBEnc, pass top_id=N (N is the largest required primary ID), or pass vpool=IDPool(start_from=N+1), so generated auxiliary IDs cannot collide with primary variables
+- Print DIMACS output with cnf.to_fp(sys.stdout)
+- Run without errors and produce valid DIMACS when executed
+
+Your task is to:
+- Verify whether the Python program is correct and produces valid DIMACS output.
+- Verify whether the resulting CNF correctly represents the intended logical constraints.
+
+Then:
+- If the program is correct, respond with exactly [[OK]].
+- If the program is incorrect, provide a corrected Python program.
+
+Important rules:
+- Output ONLY the corrected Python program inside <cnf></cnf> tags when fixing.
+- Do NOT include explanations if you are fixing the program.
+- Do NOT add any extra text after the final marker.
+- Use [[FIXED]] only when you provide a corrected version.
+- Use [[OK]] only when the program is correct.
+- Do not use markdown, backticks, HTML tags, or any other formatting. If you include anything outside these tags, the output is invalid.
+
+The input is:
+
+[PROBLEM]
+{input}
+
+[PROPOSED PROGRAM]
+{prediction}
+
+{error}

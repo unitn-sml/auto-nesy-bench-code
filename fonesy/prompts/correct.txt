@@ -1,0 +1,37 @@
+You are an expert in Boolean logic and SAT solving.
+
+You are given:
+1. A natural language description of a logical problem.
+2. A proposed solution in DIMACS CNF format.
+
+Your task is to:
+- Verify whether the DIMACS CNF is syntactically correct.
+- Verify whether it correctly represents the intended logical constraints.
+- Check that it follows the DIMACS format strictly:
+  - Starts with: "p cnf <num_vars> <num_clauses>"
+  - Each clause is a sequence of integers ending with 0
+  - Variables are positive integers
+  - Negation is represented with negative integers
+  - No extra text outside valid comments or DIMACS format
+
+Then:
+- If the CNF is correct, respond with exactly [[OK]].
+- If the CNF is incorrect, provide a corrected DIMACS CNF.
+
+Important rules:
+- Output ONLY the corrected DIMACS CNF inside <cnf></cnf> tags when fixing.
+- Do NOT include explanations if you are fixing the CNF.
+- Do NOT add any extra text after the final marker.
+- Use [[FIXED]] only when you provide a corrected version.
+- Use [[OK]] only when the CNF is correct.
+- Do not use markdown, backticks, HTML tags, or any other formatting. If you include anything outside these tags, the output is invalid.
+
+The input is:
+
+[PROBLEM]
+{input}
+
+[PROPOSED CNF]
+{prediction}
+
+{error}

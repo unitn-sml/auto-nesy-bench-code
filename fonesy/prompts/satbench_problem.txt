@@ -1,0 +1,7 @@
+{scenario}
+{variable_mapping}
+
+Use only the mapped variables; do not introduce auxiliary variables.
+
+Logical constraints (encode EXACTLY these as CNF clauses, and nothing else):
+{conditions}

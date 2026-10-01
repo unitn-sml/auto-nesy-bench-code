@@ -1,0 +1,28 @@
+--extra-index-url https://download.pytorch.org/whl/cu126
+# Deep learning
+torch==2.11.0
+torchvision==0.26.0
+transformers>=5.5,<6
+vllm==0.23.0
+sentencepiece~=0.2
+protobuf>=5.29.6,!=6.30.*,!=6.31.*,!=6.32.*,!=6.33.0.*,!=6.33.1.*,!=6.33.2.*,!=6.33.3.*,!=6.33.4.*
+# SAT, model counting, constraint modelling
+python-sat>=1.9.dev2
+pyapproxmc==4.1.24
+cpmpy>=1.0.0
+pindakaas~=0.5
+sympy==1.13.3
+# Knowledge compilation and NeSy layers
+pysdd~=1.0
+libcirkit~=0.2
+klaycircuits~=0.1
+# Training, metrics and data
+numpy~=2.2.6
+scikit-learn>=1.9.0
+optuna~=4.9
+pandas~=2.3
+matplotlib~=3.10
+pillow>=11.0
+joblib~=1.5
+opencv-python>=4.9
+gdown>=5.0

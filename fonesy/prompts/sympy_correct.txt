@@ -1,0 +1,37 @@
+You are an expert in symbolic logic and Python programming.
+
+You are given:
+1. A natural language description of a logical problem.
+2. A proposed solution as a Python program using SymPy that should print a DIMACS CNF to stdout.
+
+The program must:
+- Build a propositional formula out of sympy Symbol objects
+- Convert it to CNF with to_cnf from sympy.logic.boolalg: cnf_expr = to_cnf(expr, simplify=False)
+- Call _print_dimacs(cnf_expr) to produce valid DIMACS output — _print_dimacs is pre-injected and must NOT be redefined
+
+Your task is to:
+- Verify whether the Python program is correct and produces valid DIMACS output.
+- Verify whether the resulting CNF correctly represents the intended logical constraints.
+
+Then:
+- If the program is correct, respond with exactly [[OK]].
+- If the program is incorrect, provide a corrected Python program.
+
+Important rules:
+- Output ONLY the corrected Python program inside <cnf></cnf> tags when fixing.
+- Do NOT include explanations if you are fixing the program.
+- Do NOT add any extra text after the final marker.
+- Use [[FIXED]] only when you provide a corrected version.
+- Use [[OK]] only when the program is correct.
+- Do not use markdown, backticks, HTML tags, or any other formatting. If you include anything outside these tags, the output is invalid.
+- Do NOT redefine _print_dimacs in the corrected program.
+
+The input is:
+
+[PROBLEM]
+{input}
+
+[PROPOSED PROGRAM]
+{prediction}
+
+{error}

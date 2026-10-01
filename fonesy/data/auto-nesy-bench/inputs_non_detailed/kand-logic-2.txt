@@ -1,0 +1,4 @@
+We want to formalize a pattern-recognition task: whether two images share a common shape/color pattern.
+
+Logical constraints:
+- The two images must share a pattern. This happens if the same color/shape pattern applies to both objects or to neither in both images.

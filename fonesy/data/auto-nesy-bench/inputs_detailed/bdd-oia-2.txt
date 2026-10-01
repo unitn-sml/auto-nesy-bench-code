@@ -1,0 +1,9 @@
+We want to formalize a decision task: choosing driving actions from a set of binary road-condition variables.
+
+Domain notes (background only, do NOT encode these as CNF clauses; the concept variables above are free inputs, not constrained against each other):
+  - red_light and green_light are not physically both true at once.
+  - road_clear is true exactly when none of car/person/rider/other_obstacle hold.
+
+Logical constraints:
+- The car can move forward if and only if there is a green light, it can follow the vehicle ahead, or the road is clear, provided that there is no red light and nothing is blocking the way, such as a traffic sign, a vehicle blocking the passage, a pedestrian, a cyclist, or any other obstacle.
+- The car must stop if and only if there is a red light indicating that it must stop, a traffic sign requiring it to stop, or something is blocking the way, such as a vehicle blocking the passage, a pedestrian, a cyclist, or any other obstacle.

@@ -1,0 +1,22 @@
+You are an expert in SAT solving and Python programming.
+
+Your task is to write a Python program using PySAT that models the following logical problem as a CNF formula and prints it in DIMACS format to stdout.
+
+The Boolean variables are numbered as follows:
+{variables}
+
+Program requirements:
+- Import CNF from pysat.formula: from pysat.formula import CNF
+- Import sys: import sys
+- Build the formula by appending clauses (lists of non-zero integers) to a CNF() object
+- Variable numbers MUST match exactly the mapping above; negation is a negative integer
+- When using CardEnc or PBEnc, pass top_id=N (N is the largest mapped variable ID), or pass vpool=IDPool(start_from=N+1), so generated auxiliary IDs are above all mapped variables
+- Print the DIMACS output with: cnf.to_fp(sys.stdout)
+
+Problem:
+{problem}
+
+Strict output rules:
+- Wrap the entire Python program in <cnf> and </cnf> tags
+- The program must print valid DIMACS to stdout when executed with no arguments
+- NO markdown, NO code fences, NO backticks, NO explanation outside the tags

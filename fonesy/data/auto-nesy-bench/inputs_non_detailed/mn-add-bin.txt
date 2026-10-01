@@ -1,0 +1,4 @@
+We want to formalize single-digit addition task (full range: digits 0-9).
+
+Logical constraints:
+- The sum is equal to the first digit plus the second digit in binary.

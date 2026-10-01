@@ -1,0 +1,4 @@
+We want to formalize single-digit multiplication task (full range: digits 0-9).
+
+Logical constraints:
+- The product is equal to the first digit multiplied by the second digit in binary.

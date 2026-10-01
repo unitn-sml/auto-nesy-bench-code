@@ -1,0 +1,1 @@
+x if and only if y (x is equivalent to y)

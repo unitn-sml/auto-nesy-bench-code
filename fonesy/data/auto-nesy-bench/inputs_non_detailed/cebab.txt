@@ -1,0 +1,6 @@
+We want to formalize an overall-sentiment aggregation rule for restaurant reviews.
+
+Logical constraints:
+- The output label is determined by a majority vote over the five input sentiments: positive, negative, neutral, and unknown.
+- In case of a tie, use the priority order: Positive ≻ Negative ≻ Neutral ≻ Unknown.
+- If positive and negative are tied for the highest count, the output is Conflict.

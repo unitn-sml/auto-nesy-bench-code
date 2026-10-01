@@ -1,0 +1,26 @@
+You are an expert in SAT solving and constraint modeling.
+
+Your task is to convert the following logical problem into a CNF formula in DIMACS format.
+
+This problem's declared variables are:
+{variables}
+
+DIMACS format rules:
+- First line: p cnf <num_vars> <num_clauses>
+- Each subsequent line is one clause: space-separated integers ending with 0
+- Positive integer i = variable i is True; negative integer -i = variable i is False
+- Each declared variable's numbered range above IS its one-hot expansion, in ascending domain-value order (e.g. "1-101: men: integer, domain [0, 100]" means variable 1 is true iff men=0, variable 2 iff men=1, ..., variable 101 iff men=100); exactly one variable in each range must be true
+- If you need additional Boolean variables for auxiliary sub-expressions, number them consecutively starting right after the highest number shown above
+
+Problem:
+{problem}
+
+Before producing the CNF, think step by step inside <think></think> tags. In your reasoning, you may:
+- Map each declared variable's domain value to its numbered CNF variable
+- Enumerate the constraints you need to encode
+- Work out auxiliary clauses or sub-encodings
+- Sanity-check variable counts and clause counts
+
+Then output the final DIMACS CNF inside <cnf></cnf> tags.
+
+Do not use markdown, backticks, or any other formatting outside these two tag pairs. Anything outside <think></think> and <cnf></cnf> makes the output invalid.

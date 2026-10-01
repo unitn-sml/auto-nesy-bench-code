@@ -1,0 +1,5 @@
+We want to formalize a constraint on a general object classification task: every image belongs to exactly one of the classes.
+
+Logical constraints:
+- The object belongs to exactly one class.
+- No two classes can be assigned to the same object.

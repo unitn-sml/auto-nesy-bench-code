@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+venv/
+
+# Experiment outputs
+results/
+optuna_runs/
+*.log
+
+# Downloaded / generated data (see the Makefile)
+fonesy/data/*
+!fonesy/data/auto-nesy-bench/
+!fonesy/data/dummy/
+fonesy/data/auto-nesy-bench/targets/*_negated.dimacs
+external/

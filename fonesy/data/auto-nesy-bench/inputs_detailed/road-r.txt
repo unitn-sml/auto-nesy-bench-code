@@ -1,0 +1,77 @@
+We want to formalize a consistency-checking task from autonomous driving. Picture a single frame of dash-cam footage from a self-driving car, with a box drawn around one detected road user or traffic light. An annotator has labeled that one detection with a whole set of tags at once, i.e., what kind of agent it is, what it's doing, where it is, and, if it's a traffic light, what color it's showing.
+
+Logical constraints:
+- Exactly one agent class must be true: pedestrian, car, cyclist, motorbike, medium vehicle, large vehicle, bus, emergency vehicle, traffic light, or other traffic light.
+- At least one location must be true among vehicle lane, outgoing lane, outgoing cycle lane, incoming lane, incoming cycle lane, pavement, left pavement, right pavement, junction, crossing location, bus stop, or parking area. Traffic-light locations are also permitted by the stated requirement.
+- If the detection is pushing an object, it must be a pedestrian.
+- A pedestrian must have at least one of: pushing an object, moving away, moving towards, moving, stopped, turning left, turning right, waiting to cross, crossing from the left, crossing from the right, or crossing.
+- Crossing, crossing from the left, crossing from the right, moving, moving towards, moving away, or stopped requires the detection to be a road user: pedestrian, car, cyclist, motorbike, medium vehicle, large vehicle, bus, or emergency vehicle.
+- Waiting to cross requires the detection to be a pedestrian or cyclist.
+- An emergency vehicle, bus, large vehicle, motorbike, or car must have at least one of the specified driving actions: overtaking, moving away, moving towards, moving, braking, stopped, indicating left, indicating right, hazard lights on, turning left, turning right, crossing from the left, crossing from the right, or crossing.
+- A cyclist must have at least one action from crossing, moving away, moving towards, moving, braking, stopped, indicating left, indicating right, turning left, turning right, overtaking, waiting to cross, crossing from the left, or crossing from the right.
+- Hazard lights require the detection to be an emergency vehicle, car, medium vehicle, large vehicle, bus, or motorbike.
+- Overtaking, indicating left, indicating right, or braking requires the detection to be a cyclist, medium vehicle, large vehicle, bus, motorbike, emergency vehicle, or car.
+- Turning left or turning right requires the detection to be a car, cyclist, motorbike, medium vehicle, large vehicle, bus, or emergency vehicle.
+- If crossing is true, the detection must be a pedestrian or cyclist.
+- The following agent classes are mutually exclusive:
+	- car with cyclist, motorbike, medium vehicle, large vehicle, bus, emergency vehicle,traffic light, other traffic light, or pedestrian
+	- cyclist with motorbike, medium vehicle, large vehicle, bus, emergency vehicle, traffic light, other traffic light, or pedestrian
+	- motorbike with medium vehicle, large vehicle, bus, emergency vehicle, traffic light, other traffic light, or pedestrian
+	- medium vehicle with large vehicle, bus, emergency vehicle, traffic light, other traffic light, pedestrian
+	- large vehicle with bus, emergency vehicle, traffic light, other traffic light, pedestrian
+	- bus with emergency vehicle, traffic light, other traffic light, or pedestrian
+	- emergency vehicle with traffic light, other traffic light, or pedestrian
+	- traffic light with other traffic light
+- Traffic-light colours are mutually exclusive: red, amber, and green cannot occur together.
+- Red, amber, or green requires the detection to be a traffic light or another traffic light.
+- Traffic-light colours are incompatible with the road-user classes and actions specified in the requirements. In particular, red/amber/green cannot occur together with pedestrian, car, cyclist, motorbike, medium vehicle, large vehicle, bus, or emergency vehicle, and cannot occur with the prohibited movement/action combinations listed in the requirements.
+- Traffic lights and other traffic lights cannot have the prohibited actions such as moving away, moving towards, moving, braking, stopped, indicating left/right, hazard lights, turning left/right, overtaking, waiting to cross, crossing from either side, crossing, or pushing an object.
+- Traffic lights and other traffic lights are also incompatible with pedestrian.
+- The following action pairs cannot occur together:
+	- moving away and moving
+	- moving towards and moving
+	- moving and stopped
+	- indicating left and indicating right
+	- braking and waiting to cross
+	- braking and pushing an object
+	- crossing and braking
+	- waiting to cross and indicating left
+	- waiting to cross and indicating right
+	- waiting to cross and overtaking
+	- waiting to cross and crossing from the left
+	- waiting to cross and crossing from the right
+	- waiting to cross and crossing
+	- pedestrian and overtaking
+	- pedestrian and indicating left
+	- pedestrian and indicating right
+	- pedestrian and hazard lights
+	- pedestrian and braking
+	- pedestrian and pushing an object
+- The following location pairs cannot occur together:
+	- outgoing lane and outgoing cycle lane
+	- vehicle lane and incoming cycle lane
+	- outgoing lane and incoming cycle lane
+	- incoming lane and outgoing cycle lane
+	- outgoing lane and pavement
+	- incoming cycle lane and outgoing cycle lane
+	- outgoing lane and right pavement
+	- incoming cycle lane and pavement
+	- crossing location and outgoing lane
+	- vehicle lane and parking area
+	- bus stop and outgoing lane
+	- outgoing lane and parking area
+	- bus stop and outgoing cycle lane
+	- parking area and outgoing cycle lane
+	- crossing location and incoming cycle lane
+	- left pavement and right pavement
+	- incoming lane and parking area
+	- incoming cycle lane and bus stop
+	- incoming cycle lane and parking area
+	- pavement and parking area
+	- left pavement and parking area
+	- right pavement and parking area
+	- junction and parking area
+	- crossing location and bus stop
+	- crossing location and parking area
+	- bus stop and parking area
+- All of the above constraints apply simultaneously to the same detection.

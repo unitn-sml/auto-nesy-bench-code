@@ -1,0 +1,5 @@
+We want to formalize a grid-pathfinding validity task on a 4x4 grid.
+
+Logical constraints:
+- The selected edges should form one simple path on the 4×4 grid starting from cell (0,0) to cell (3,3).
+- No loops, cycles, or disconnected paths are allowed.

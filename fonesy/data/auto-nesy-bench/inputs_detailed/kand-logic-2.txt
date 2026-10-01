@@ -1,0 +1,7 @@
+We want to formalize a pattern-recognition task: whether two images share a common shape/color pattern.
+
+Logical constraints:
+- Each primitive has exactly one shape and one color.
+- The two images must share either the same color pattern or the same shape pattern:
+	- a color pattern is defined by whether the two primitives in an image have the same color or different colors.
+	- a shape pattern is defined by whether the two primitives have the same shape or different shapes.
