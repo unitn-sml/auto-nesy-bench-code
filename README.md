@@ -2,7 +2,7 @@
 
 Code and data for **auto-nesy-bench**, a Neuro-Symbolic (NeSy) benchmark for turning natural-language domain knowledge into constraints written in conjunctive normal form formulas with LLMs, and for measuring what is their impact on NeSy predictors.
 
-> See the benchmark [website](https://unitn-sml.github.io/auto-nesy-bench/) for more information!
+> Read the [paper](https://arxiv.org/abs/2610.01519) and see the benchmark [website](https://unitn-sml.github.io/auto-nesy-bench/) for more information!
 
 The pipeline has two stages:
 
